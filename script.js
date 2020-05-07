@@ -74,12 +74,14 @@ operands[10].addEventListener('click', function(){
 
 //operators
 var operator = document.getElementsByClassName("operator");
+var previousExpression = document.getElementById("expression");
 operator[0].addEventListener('click', function(){
     if(display.getAttribute('value') == "" || display.getAttribute('value') == "Error"){
         display.setAttribute('value', "Error");
         return;
     }
     operandOne += display.getAttribute('value') + operator[0].getAttribute('data-value');
+    previousExpression.setAttribute('value', operandOne);
     display.setAttribute('value', "");
 });
 operator[1].addEventListener('click', function(){
@@ -88,6 +90,7 @@ operator[1].addEventListener('click', function(){
         return;
     }
     operandOne += display.getAttribute('value') + operator[1].getAttribute('data-value');
+    previousExpression.setAttribute('value', operandOne);
     display.setAttribute('value', "");
 });
 operator[2].addEventListener('click', function(){
@@ -96,6 +99,7 @@ operator[2].addEventListener('click', function(){
         return;
     }
     operandOne += display.getAttribute('value') + operator[2].getAttribute('data-value');
+    previousExpression.setAttribute('value', operandOne);
     display.setAttribute('value', "");
 });
 operator[3].addEventListener('click', function(){
@@ -104,6 +108,7 @@ operator[3].addEventListener('click', function(){
         return;
     }
     operandOne += display.getAttribute('value') + operator[3].getAttribute('data-value');
+    previousExpression.setAttribute('value', operandOne);
     display.setAttribute('value', "");
 });
 operator[4].addEventListener('click', function(){
@@ -118,7 +123,7 @@ operator[4].addEventListener('click', function(){
         display.setAttribute('value', 'Error');
         return;
     }
-    console.log(operandOne + operandTwo);
+    previousExpression.setAttribute('value', operandOne + operandTwo);
     display.setAttribute('value', eval(operandOne + operandTwo));
     operandTwo = "";
     operandOne = "";
@@ -129,6 +134,7 @@ specialOperator[0].addEventListener('click', function(){
     operandOne = "";
     operandTwo = "";
     display.setAttribute('value', "");
+    previousExpression.setAttribute('value', "");
 });
 specialOperator[1].addEventListener('click', function(){
     if(display.getAttribute('value') == "" || display.getAttribute('value') == "Error"){

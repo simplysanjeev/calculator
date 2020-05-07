@@ -20,6 +20,10 @@ button, input{
 input{
     text-align: right;
 }
+#expression{
+    background-color: rgb(243, 239, 239);
+    color: #5c5858;
+}
 caption{
     background-color: #000000;
     height: 30px;

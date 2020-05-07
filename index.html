@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Calculator</title>
+<link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+</head>
+<body>
+<div id="container">
+<table>
+    <caption>CALCULATOR</caption>
+    <tr>
+        <td colspan="4">
+            <input type="text" id="display" value=""/>
+        </td>
+    </tr>
+    <tr>
+        <td><button data-value="clear" class="special-operator">AC</button></td>
+        <td><button data-value="negate" class="special-operator">+/-</button></td>
+        <td><button data-value="percentage" class="special-operator">%</button></td>
+        <td><button data-value="/" class="operator">/</button></td>
+    </tr>
+    <tr>
+        <td><button data-value="7" class="operand">7</button></td>
+        <td><button data-value="8"  class="operand">8</button></td>
+        <td><button data-value="9"  class="operand">9</button></td>
+        <td><button data-value="*"  class="operator">*</button></td>
+    </tr>
+    <tr>
+        <td><button data-value="4"  class="operand">4</button></td>
+        <td><button data-value="5"  class="operand">5</button></td>
+        <td><button data-value="6"  class="operand">6</button></td>
+        <td><button data-value="-"  class="operator">-</button></td>
+    </tr>
+    <tr>
+        <td><button data-value="1"  class="operand">1</button></td>
+        <td><button data-value="2"  class="operand">2</button></td>
+        <td><button data-value="3"  class="operand">3</button></td>
+        <td><button data-value="+"  class="operator">+</button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button data-value="0"  class="operand">0</button></td>
+        <td><button data-value="."  class="operand">.</button></td>
+        <td><button data-value="="  class="operator">=</button></td>
+    </tr>
+</div>
+</table>
+<script src="script.js"></script>
+</body>
+</html>
